@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Days Till Christmas</title>
+  </head>
+  <body>
+    <h1>Days Till Christmas:</h1>
+    <p id="countdown"></p>
+    
+    <script>
+      // Set the date for Christmas
+      const christmasDate = new Date("December 25, 2023");
+      
+      // Calculate the remaining days
+      const now = new Date();
+      const remainingTime = christmasDate.getTime() - now.getTime();
+      const remainingDays = Math.ceil(remainingTime / (1000 * 60 * 60 * 24));
+      
+      // Display the remaining days in the HTML page
+      document.getElementById("countdown").innerHTML = remainingDays;
+    </script>
+  </body>
+</html>
